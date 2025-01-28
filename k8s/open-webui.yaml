@@ -21,7 +21,26 @@ spec:
           volumeMounts:
             - mountPath: /app/backend/data
               name: open-webui-storage
+            - mountPath: /root/.ollama
+              name: ollama-storage
       volumes:
         - name: open-webui-storage
           persistentVolumeClaim:
             claimName: open-webui-pvc
+        - name: ollama-storage
+          persistentVolumeClaim:
+            claimName: ollama-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: open-webui-service
+  namespace: ollama
+spec:
+  selector:
+    app: open-webui
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 8080
+  type: NodePort
