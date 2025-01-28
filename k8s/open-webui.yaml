@@ -23,8 +23,7 @@ spec:
               name: open-webui-storage
             - mountPath: /root/.ollama
               name: ollama-storage
-          args:
-            - '--models-path=/root/.ollama/models'
+          args: []
       volumes:
         - name: open-webui-storage
           persistentVolumeClaim:
