@@ -1,3 +1,5 @@
+# Ollama + model + open-webui
+
 1. Run Ollama - CPU only. Docs - https://hub.docker.com/r/ollama/ollama
 
 ```sh
