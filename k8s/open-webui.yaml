@@ -21,23 +21,7 @@ spec:
           volumeMounts:
             - mountPath: /app/backend/data
               name: open-webui-storage
-          args:
-            - '--add-host=host.docker.internal:host-gateway'
       volumes:
         - name: open-webui-storage
           persistentVolumeClaim:
             claimName: open-webui-pvc
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: open-webui-service
-  namespace: ollama
-spec:
-  selector:
-    app: open-webui
-  ports:
-    - protocol: TCP
-      port: 3000
-      targetPort: 8080
-  type: NodePort
