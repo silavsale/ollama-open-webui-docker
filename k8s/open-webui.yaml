@@ -23,7 +23,6 @@ spec:
               name: open-webui-storage
             - mountPath: /root/.ollama
               name: ollama-storage
-          command: ['/start.sh'] # Replace this with the actual entrypoint if it's different
           args:
             - '--models-path=/root/.ollama/models'
       volumes:
