@@ -25,3 +25,9 @@ spec:
               value: 'http://ollama-service:11434'
             - name: WEBUI_AUTH_ENABLED
               value: 'false'
+            - name: WEBUI_AUTH_PROVIDER
+              value: 'none' # This may help bypass authentication
+            - name: ENABLE_SIGNUP
+              value: 'true' # Ensure at least one admin user can be created
+            - name: WEBUI_SECRET_KEY
+              value: 'mysecretkey' # Prevent random keys on every restart
