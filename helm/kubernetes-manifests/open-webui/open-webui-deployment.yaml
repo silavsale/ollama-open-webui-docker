@@ -21,17 +21,7 @@ spec:
           ports:
             - containerPort: 8080
           env:
-            - name: OLLAMA_API_BASE_URL
-              value: 'http://10.100.73.103:11434'
             - name: OLLAMA_HOST
-              value: '0.0.0.0'
-            - name: OLLAMA_ORIGINS
-              value: '*'
-            - name: WEBUI_AUTH_ENABLED
-              value: 'false'
-            - name: WEBUI_AUTH_PROVIDER
-              value: 'none' # This may help bypass authentication
-            - name: ENABLE_SIGNUP
-              value: 'true' # Ensure at least one admin user can be created
-            - name: WEBUI_SECRET_KEY
-              value: 'mysecretkey' # Prevent random keys on every restart
+              value: 'host.docker.internal'
+            - name: OLLAMA_PORT
+              value: '11434'
