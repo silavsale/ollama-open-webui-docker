@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: open-webui-deployment
+  name: open-webui
   namespace: ollama
 spec:
   replicas: 1
@@ -27,7 +27,7 @@ spec:
               memory: '1Gi'
           env:
             - name: OLLAMA_API_BASE_URL
-              value: 'http://ollama-service.ollama.svc.cluster.local:11434' # Updated variable name and service URL
+              value: 'http://ollama-service.ollama.svc.cluster.local:11434'
             - name: WEBUI_AUTH
               value: 'True'
 
