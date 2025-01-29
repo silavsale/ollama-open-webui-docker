@@ -22,7 +22,7 @@ spec:
             - containerPort: 8080
           env:
             - name: OLLAMA_API_BASE_URL
-              value: 'http://127.0.0.1:11434'
+              value: 'http://127.0.0.1:11434/ollama/api/version'
             - name: OLLAMA_HOST
               value: '0.0.0.0'
             - name: OLLAMA_ORIGINS
