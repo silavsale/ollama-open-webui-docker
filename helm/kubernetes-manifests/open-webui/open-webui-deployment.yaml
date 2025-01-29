@@ -22,7 +22,7 @@ spec:
             - containerPort: 8080
           env:
             - name: OLLAMA_API_BASE_URL
-              value: 'http://ollama-service:11434'
+              value: 'http://ollama-service:11434/api/chat' # Updated to use service name
             - name: OLLAMA_ORIGINS
               value: '*'
             - name: WEBUI_AUTH_ENABLED
