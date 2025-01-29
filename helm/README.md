@@ -13,7 +13,7 @@ helm repo update
 kubectl create namespace ollama
 ```
 
-kubectl apply -f ollama-pvc.yaml
+kubectl apply -f ollama/ollama-pvc.yaml
 
 kubectl apply -f ollama/ollama-deployment.yaml
 kubectl apply -f ollama/ollama-service.yaml
@@ -24,3 +24,7 @@ kubectl apply -f open-webui/open-webui-service.yaml
 kubectl apply -f open-webui/open-webui-nodeport.yaml
 
 kubectl apply -f ingress/ingress.yaml
+
+### To restart:
+
+kubectl rollout restart deployment ollama -n ollama
