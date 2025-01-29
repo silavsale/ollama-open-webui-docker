@@ -22,4 +22,4 @@ spec:
             - containerPort: 8080
           env:
             - name: OLLAMA_API_BASE_URL
-              value: 'http://ollama-service.ollama.svc.cluster.local:11434'
+              value: 'http://ollama-service:11434'
