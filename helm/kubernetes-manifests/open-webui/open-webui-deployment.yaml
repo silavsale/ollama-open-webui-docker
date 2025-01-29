@@ -17,12 +17,16 @@ spec:
     spec:
       containers:
         - name: open-webui
-          image: ghcr.io/open-webui/open-webui:latest
+          image: ghcr.io/open-webui/open-webui:main
           ports:
             - containerPort: 8080
           env:
             - name: OLLAMA_API_BASE_URL
-              value: 'http://192.168.0.117:11434'
+              value: 'http://127.0.0.1:11434'
+            - name: OLLAMA_HOST
+              value: '0.0.0.0'
+            - name: OLLAMA_ORIGINS
+              value: '*'
             - name: WEBUI_AUTH_ENABLED
               value: 'false'
             - name: WEBUI_AUTH_PROVIDER
