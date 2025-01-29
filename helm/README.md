@@ -12,3 +12,13 @@ helm repo update
 ```sh
 kubectl create namespace ollama
 ```
+
+kubectl apply -f ollama/ollama-deployment.yaml
+kubectl apply -f ollama/ollama-service.yaml
+kubectl apply -f ollama/ollama-nodeport.yaml
+
+kubectl apply -f open-webui/open-webui-deployment.yaml
+kubectl apply -f open-webui/open-webui-service.yaml
+kubectl apply -f open-webui/open-webui-nodeport.yaml
+
+kubectl apply -f ingress/ingress.yaml
