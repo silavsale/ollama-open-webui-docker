@@ -22,7 +22,7 @@ spec:
             - containerPort: 8080
           env:
             - name: OLLAMA_API_BASE_URL
-              value: 'host.docker.internal:11434'
+              value: 'http://10.100.73.103:11434'
             - name: WEBUI_AUTH_ENABLED
               value: 'false'
             - name: WEBUI_AUTH_PROVIDER
