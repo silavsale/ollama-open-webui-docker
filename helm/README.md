@@ -13,6 +13,8 @@ helm repo update
 kubectl create namespace ollama
 ```
 
+kubectl apply -f ollama-pvc.yaml
+
 kubectl apply -f ollama/ollama-deployment.yaml
 kubectl apply -f ollama/ollama-service.yaml
 kubectl apply -f ollama/ollama-nodeport.yaml
